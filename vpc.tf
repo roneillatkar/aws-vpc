@@ -6,7 +6,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "Test VPC"
+    Name = "Test VPC for rds custom"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "public-subnet-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Public Subnet 1"
+    Name = "Public Subnet us-east-1a"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_subnet" "public-subnet-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Public Subnet 2"
+    Name = "Public Subnet us-east-1b"
   }
 }
 
@@ -84,7 +84,7 @@ resource "aws_subnet" "private-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Private Subnet 1 | App Tier"
+    Name = "Private Subnet us-east-1a"
   }
 }
 
@@ -97,7 +97,7 @@ resource "aws_subnet" "private-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Private Subnet 2 | App Tier"
+    Name = "Private subnet us-east-1b"
   }
 }
 
@@ -110,7 +110,7 @@ resource "aws_subnet" "private-subnet-3" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Private Subnet 3 | Database Tier"
+    Name = "Private DB subnet us-east-1a"
   }
 }
 
@@ -123,6 +123,6 @@ resource "aws_subnet" "private-subnet-4" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Private Subnet 4 | Database Tier"
+    Name = "Private DB Subnet 4 us-east-b"
   }
 }
